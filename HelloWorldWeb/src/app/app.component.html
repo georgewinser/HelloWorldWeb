@@ -1,7 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
+<h1>{{title}}</h1>
 
-<h1>Application says what?</h1>
-<ul>
-  <li *ngFor="let value of apiValues">The Key, {{value.key}}, has Value, {{value.value}}</li>
-</ul>
+<nav>
+  <a routerLink="/gbp">GBP Exchange Rates</a>
+  <a routerLink="/eur">Euro Exchange Rates</a>
+
+</nav>
+
+<router-outlet></router-outlet>
+

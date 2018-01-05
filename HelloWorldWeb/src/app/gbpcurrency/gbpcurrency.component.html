@@ -1,0 +1,6 @@
+
+<h1>Exchange Rates From GBP, From Fixer.io</h1>
+<a routerLink="/eur">Euro Exchange Rates</a>
+<ul>
+  <li *ngFor="let value of apiValues">Currency: {{value.key}}, Rate: {{value.value}}</li>
+</ul>
