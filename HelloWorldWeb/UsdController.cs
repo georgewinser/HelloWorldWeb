@@ -13,7 +13,7 @@ using Newtonsoft.Json;
 namespace HelloWorldWeb
 {
   [Route("api/[controller]")]
-  public class GbpController : Controller
+  public class UsdController : Controller
   {
     // GET: api/values
     [HttpGet]
@@ -21,12 +21,12 @@ namespace HelloWorldWeb
     {
       List<KeyValuePair<string, double>> dic = new List<KeyValuePair<string, double>>();
 
-      HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.fixer.io/latest?base=GBP");
+      HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://api.fixer.io/latest?base=USD");
       HttpClient client = new HttpClient();
     
       //request.AutomaticDecompression = DecompressionMethods.GZip;
       string json = string.Empty;
-      using (HttpResponseMessage response = client.GetAsync("https://api.fixer.io/latest?base=GBP").Result)      
+      using (HttpResponseMessage response = client.GetAsync("https://api.fixer.io/latest?base=USD").Result)      
       {
         json = response.Content.ReadAsStringAsync().Result;
       }
@@ -43,7 +43,7 @@ namespace HelloWorldWeb
 
       
 
-      return dic.OrderBy(k=>k.Key);      
+      return dic.OrderBy(k=>k.Key);
 
     }
 

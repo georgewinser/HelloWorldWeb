@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { EurocurrencyComponent } from './eurocurrency/eurocurrency.component';
 import { GbpcurrencyComponent } from './gbpcurrency/gbpcurrency.component';
+import { UsdcurrencyComponent } from './usdcurrency/usdcurrency.component';
 @NgModule({
     declarations: [
         AppComponent,
         GbpcurrencyComponent,
-        EurocurrencyComponent
+        EurocurrencyComponent,
+        UsdcurrencyComponent
     ],
     imports: [
         BrowserModule,
